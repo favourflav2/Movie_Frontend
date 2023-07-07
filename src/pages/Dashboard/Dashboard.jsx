@@ -33,7 +33,7 @@ export default function Dashboard() {
         <Box className="flex flex-col p-10 w-full h-full">
           {savedMovies?.length > 0 ? <Typography className="text-white my-5 text-lg font-bold">Your Saved Movies</Typography> : <Typography className="text-white my-5 text-lg font-bold">You Don't Have Any Saved Movies</Typography>}
 
-          <Box className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2">
+          <Box className="grid xl:grid-cols-4 2xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2">
             {savedMovies.map((item, index) => (
               <DashBoardCard item={item} key={index} />
             ))}

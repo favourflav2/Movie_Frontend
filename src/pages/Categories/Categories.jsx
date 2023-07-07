@@ -57,6 +57,7 @@ export default function Categories() {
       console.log(error);
     }
   }, [error]);
+  
   // Scroll to top
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
