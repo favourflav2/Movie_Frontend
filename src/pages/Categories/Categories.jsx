@@ -98,7 +98,7 @@ export default function Categories() {
         )}
 
         {/* Mapped Data */}
-        <Box className="grid xl:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-2 lg:grid-cols-4">
+        <Box className="grid xl:grid-cols-5 2xl:grid-cols-6 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-2 lg:grid-cols-4">
           {loading ? (
             <>
               {Array.from(new Array(20)).map((item, index) => (
