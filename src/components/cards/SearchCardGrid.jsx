@@ -1,18 +1,16 @@
-import { Box, Typography, useMediaQuery, IconButton } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 
 import { Link, useNavigate } from "react-router-dom";
-import StarIcon from "@mui/icons-material/Star";
-import { useDispatch, useSelector } from "react-redux";
-import { toast } from "react-toastify";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import { likeMovie } from "../../Redux/features/authSlice";
+
+
+
 
 export default function SearchCardGrid({ item }) {
-  const { user, savedMovies } = useSelector((state) => state.auth);
+  
   const isNonMobile = useMediaQuery("(min-width:640px)");
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  
   
 
   return (
@@ -24,7 +22,7 @@ export default function SearchCardGrid({ item }) {
         <img
           src={
             item.poster_path
-              ? `https://image.tmdb.org/t/p/original/${item.poster_path}`
+              ? `https://image.tmdb.org/t/p/w500/${item.poster_path}`
               : "https://filestore.community.support.microsoft.com/api/images/ext?url=https%3A%2F%2Fanswerscdn.microsoft.com%2Fstatic%2Fimages%2Fimage-not-found.jpg"
           }
           alt="Movie Pic"

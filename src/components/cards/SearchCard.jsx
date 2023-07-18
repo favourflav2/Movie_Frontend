@@ -14,7 +14,7 @@ export default function SearchCard({item,setOpenSearch, setSearchValue}) {
 
         {/* Image */}
         <Box className="w-[30%] h-full p-1">
-            <img src={item?.poster_path ? `https://image.tmdb.org/t/p/original/${item?.poster_path}`:"https://filestore.community.support.microsoft.com/api/images/ext?url=https%3A%2F%2Fanswerscdn.microsoft.com%2Fstatic%2Fimages%2Fimage-not-found.jpg"} alt="Movie Pic" className='h-full w-[70px] '/>
+            <img src={item?.poster_path ? `https://image.tmdb.org/t/p/w342/${item?.poster_path}`:"https://filestore.community.support.microsoft.com/api/images/ext?url=https%3A%2F%2Fanswerscdn.microsoft.com%2Fstatic%2Fimages%2Fimage-not-found.jpg"} alt="Movie Pic" className='h-full w-[70px] '/>
         </Box>
 
         <Box className="w-[70%] flex flex-col items-center justify-center text-gray-300 p-1">

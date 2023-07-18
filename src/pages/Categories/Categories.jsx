@@ -15,7 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { getAllTopMovies, getAllTopRatedMovies, getAllTrending } from "../../Redux/features/movieSlice";
 
 
-export default function Categories() {
+ function Categories() {
   const { name } = useParams();
   const isNonMobile = useMediaQuery("(min-width:640px)");
 
@@ -37,6 +37,8 @@ export default function Categories() {
     }
     // eslint-disable-next-line
   }, [page])
+
+  
 
 
 
@@ -160,3 +162,5 @@ export default function Categories() {
     </Box>
   );
 }
+
+ export default React.memo(Categories)

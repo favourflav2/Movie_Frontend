@@ -23,7 +23,7 @@ export default function TrendingCard({ item }) {
   return (
     <Box className=" relative  group p-1 h-[280px] sm:h-[350px] md:h-[380px] 2xl:h-[490px] flex-col  ">
       <img
-        src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
         alt=""
         className="  h-full w-full"
       />
@@ -135,8 +135,8 @@ export default function TrendingCard({ item }) {
                   {item.overview.slice(0, 80) + "..."}{" "}
                 </span>
               )}
-              <button className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 text-[16px] sm:text-[21px] underline hover:underline text-gray-300 hover:text-blue-600">
-                <Link to={`/movie/${item.id}`}>Read More</Link>
+              <button className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 text-[16px] sm:text-[19px] underline hover:underline text-gray-300 hover:text-blue-600">
+                <Link to={`/movie/${item.id}`}>Read More About Movie</Link>
               </button>
               {/* <Box className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>
                     <span className="text-gray-300 text-[22px] no-underline hover:underline">Read More</span>
