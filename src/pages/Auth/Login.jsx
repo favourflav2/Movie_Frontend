@@ -94,7 +94,7 @@ export default function Login() {
             <Typography className="text-white text-3xl ">
               Don't Already Have An Account?
             </Typography>
-            <Typography className="underline text-xl hover:text-gray-200">
+            <Typography className="underline text-xl hover:text-gray-200" onClick={()=>dispatch(setError())}>
               <Link to="/signup">Sign Up</Link>
             </Typography>
           </Box>

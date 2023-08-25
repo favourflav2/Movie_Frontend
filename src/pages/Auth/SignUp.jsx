@@ -97,7 +97,7 @@ export default function SignUp() {
             <Typography className="text-white text-3xl ">
               Already Have An Account?
             </Typography>
-            <Typography className="underline text-xl hover:text-gray-200">
+            <Typography className="underline text-xl hover:text-gray-200" onClick={()=>dispatch(setError())}>
               <Link to="/login">Login</Link>
             </Typography>
           </Box>

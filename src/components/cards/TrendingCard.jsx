@@ -19,7 +19,7 @@ export default function TrendingCard({ item }) {
   const isNonMobile = useMediaQuery("(min-width:640px)");
   const dispatch = useDispatch();
   const movieFind = savedMovies?.find((value) => value.movieId === item.id);
-
+  
   return (
     <Box className=" relative  group p-1 h-[280px] sm:h-[350px] md:h-[380px] 2xl:h-[490px] flex-col  ">
       <img

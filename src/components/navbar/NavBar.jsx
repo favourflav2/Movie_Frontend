@@ -64,6 +64,17 @@ export default function NavBar() {
 
   const isNonMobile = useMediaQuery("(min-width:842px)");
 
+  if(user?.token){
+    if(user?.token?.length > 55){
+      const decode = jwt_decode(user?.token)
+      if(decode.exp * 1000 < new Date().getTime()){
+        console.log("Jwt expired logged out")
+        dispatch(setLogOut())
+        navigate("/")
+      }
+    }
+  }
+
   
 
   async function handleSearch(search) {
@@ -98,13 +109,19 @@ export default function NavBar() {
     }
   }
 
-  if(user?.token?.length > 55){
-    const decode = jwt_decode(user?.token)
-    if(decode.exp * 100 < new Date().getTime()){
-      console.log("Jwt expired logged out")
-      dispatch(setLogOut())
-    }
-  }
+ 
+
+  // if (user?.token) {
+  //   const decoded: any = jwt_decode(user?.token);
+  //   if (decoded.exp * 1000 < new Date().getTime()) {
+  //     console.log("jwt expired");
+  //     dispatch(setLogout());
+  //     navigate("/")
+  //   }
+  // }
+  
+
+
 
   React.useEffect(() => {
     document.body.addEventListener("click", handleClickOutside);
